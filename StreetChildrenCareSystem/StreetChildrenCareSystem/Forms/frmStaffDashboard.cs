@@ -8,13 +8,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace StreetChildrenCareSystem
+namespace StreetChildrenCareSystem.Forms
 {
-    public partial class Form1 : Form
+    public partial class frmStaffDashboard : Form
     {
-        public Form1()
+        public frmStaffDashboard(string userID)
         {
             InitializeComponent();
+        }
+
+        private void frmStaffDashboard_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
