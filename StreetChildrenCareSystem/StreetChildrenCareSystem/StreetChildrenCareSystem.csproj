@@ -161,6 +161,18 @@
     <Compile Include="Forms\frmAdminDashboard.Designer.cs">
       <DependentUpon>frmAdminDashboard.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\frmChildProfile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmChildProfile.Designer.cs">
+      <DependentUpon>frmChildProfile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmChildren.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmChildren.Designer.cs">
+      <DependentUpon>frmChildren.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\frmStaffDashboard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -179,6 +191,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Forms\frmAdminDashboard.resx">
       <DependentUpon>frmAdminDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmChildProfile.resx">
+      <DependentUpon>frmChildProfile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmChildren.resx">
+      <DependentUpon>frmChildren.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmStaffDashboard.resx">
       <DependentUpon>frmStaffDashboard.cs</DependentUpon>

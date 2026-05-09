@@ -15,6 +15,7 @@ namespace StreetChildrenCareSystem
 
         private void button1_Click(object sender, EventArgs e)
         {
+            btnLogin_Click(sender, e); // forward to real handler
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
@@ -73,6 +74,11 @@ namespace StreetChildrenCareSystem
         private void btnExit_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void frmLogin_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
