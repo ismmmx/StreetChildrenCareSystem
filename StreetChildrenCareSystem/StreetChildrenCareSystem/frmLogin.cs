@@ -33,7 +33,7 @@ namespace StreetChildrenCareSystem
                 txtPassword.Focus();
                 return;
             }
-
+            
             try
             {
                 string query = "SELECT UserID, UserRole FROM Users WHERE UserID = @uid AND Password = @pass";
@@ -80,5 +80,7 @@ namespace StreetChildrenCareSystem
         {
 
         }
+
+       
     }
 }

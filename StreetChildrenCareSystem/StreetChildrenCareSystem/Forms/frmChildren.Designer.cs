@@ -81,7 +81,7 @@
             // 
             // btnLogout
             // 
-            this.btnLogout.Location = new System.Drawing.Point(1205, 48);
+            this.btnLogout.Location = new System.Drawing.Point(1131, 48);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(156, 73);
             this.btnLogout.TabIndex = 3;
@@ -256,6 +256,7 @@
             this.btnClear.TabIndex = 29;
             this.btnClear.Text = "Clear";
             this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // txtSearch
             // 
@@ -288,16 +289,16 @@
             // dgvChildren
             // 
             this.dgvChildren.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvChildren.Location = new System.Drawing.Point(90, 1126);
+            this.dgvChildren.Location = new System.Drawing.Point(74, 1126);
             this.dgvChildren.Name = "dgvChildren";
             this.dgvChildren.RowHeadersWidth = 82;
             this.dgvChildren.RowTemplate.Height = 33;
-            this.dgvChildren.Size = new System.Drawing.Size(1336, 494);
+            this.dgvChildren.Size = new System.Drawing.Size(1212, 494);
             this.dgvChildren.TabIndex = 33;
             // 
             // btnViewProfile
             // 
-            this.btnViewProfile.Location = new System.Drawing.Point(134, 1684);
+            this.btnViewProfile.Location = new System.Drawing.Point(134, 1653);
             this.btnViewProfile.Name = "btnViewProfile";
             this.btnViewProfile.Size = new System.Drawing.Size(128, 72);
             this.btnViewProfile.TabIndex = 34;
@@ -306,7 +307,7 @@
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(462, 1681);
+            this.btnDelete.Location = new System.Drawing.Point(604, 1653);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(143, 75);
             this.btnDelete.TabIndex = 35;
@@ -315,7 +316,7 @@
             // 
             // btnBack
             // 
-            this.btnBack.Location = new System.Drawing.Point(837, 1681);
+            this.btnBack.Location = new System.Drawing.Point(1035, 1653);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(137, 73);
             this.btnBack.TabIndex = 37;
@@ -324,9 +325,10 @@
             // 
             // frmChildren
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1506, 1788);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(192F, 192F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.AutoScroll = true;
+            this.ClientSize = new System.Drawing.Size(1374, 929);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnViewProfile);
@@ -357,6 +359,7 @@
             this.Controls.Add(this.btnHome);
             this.Controls.Add(this.label1);
             this.Name = "frmChildren";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmChildren";
             this.Load += new System.EventHandler(this.frmChildren_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numAge)).EndInit();

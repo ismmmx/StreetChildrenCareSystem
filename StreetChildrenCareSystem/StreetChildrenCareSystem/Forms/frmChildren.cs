@@ -258,6 +258,11 @@ namespace StreetChildrenCareSystem.Forms
         {
             this.Close();
         }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 

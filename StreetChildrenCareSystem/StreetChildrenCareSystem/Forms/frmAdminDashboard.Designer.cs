@@ -93,7 +93,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(49, 26);
+            this.label2.Location = new System.Drawing.Point(61, 26);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(119, 25);
             this.label2.TabIndex = 4;
@@ -111,7 +111,7 @@
             // lblOrpCount
             // 
             this.lblOrpCount.AutoSize = true;
-            this.lblOrpCount.Location = new System.Drawing.Point(86, 77);
+            this.lblOrpCount.Location = new System.Drawing.Point(100, 79);
             this.lblOrpCount.Name = "lblOrpCount";
             this.lblOrpCount.Size = new System.Drawing.Size(36, 25);
             this.lblOrpCount.TabIndex = 6;
@@ -153,24 +153,27 @@
             this.btnChildren.TabIndex = 10;
             this.btnChildren.Text = "Children";
             this.btnChildren.UseVisualStyleBackColor = true;
+            this.btnChildren.Click += new System.EventHandler(this.btnChildren_Click);
             // 
             // btnOrphanage
             // 
-            this.btnOrphanage.Location = new System.Drawing.Point(663, 810);
+            this.btnOrphanage.Location = new System.Drawing.Point(619, 810);
             this.btnOrphanage.Name = "btnOrphanage";
-            this.btnOrphanage.Size = new System.Drawing.Size(112, 46);
+            this.btnOrphanage.Size = new System.Drawing.Size(156, 46);
             this.btnOrphanage.TabIndex = 12;
             this.btnOrphanage.Text = "Orphanage";
             this.btnOrphanage.UseVisualStyleBackColor = true;
+            this.btnOrphanage.Click += new System.EventHandler(this.btnOrphanage_Click);
             // 
             // btnFoundation
             // 
-            this.btnFoundation.Location = new System.Drawing.Point(1177, 810);
+            this.btnFoundation.Location = new System.Drawing.Point(1073, 810);
             this.btnFoundation.Name = "btnFoundation";
-            this.btnFoundation.Size = new System.Drawing.Size(116, 46);
+            this.btnFoundation.Size = new System.Drawing.Size(164, 66);
             this.btnFoundation.TabIndex = 14;
             this.btnFoundation.Text = "Foundation";
             this.btnFoundation.UseVisualStyleBackColor = true;
+            this.btnFoundation.Click += new System.EventHandler(this.btnFoundation_Click);
             // 
             // btnVaccination
             // 
@@ -180,6 +183,7 @@
             this.btnVaccination.TabIndex = 16;
             this.btnVaccination.Text = "Vaccination";
             this.btnVaccination.UseVisualStyleBackColor = true;
+            this.btnVaccination.Click += new System.EventHandler(this.btnVaccination_Click);
             // 
             // btnManageUsers
             // 
@@ -189,57 +193,64 @@
             this.btnManageUsers.TabIndex = 18;
             this.btnManageUsers.Text = "Manage Users";
             this.btnManageUsers.UseVisualStyleBackColor = true;
+            this.btnManageUsers.Click += new System.EventHandler(this.btnManageUsers_Click);
             // 
             // btnLogout
             // 
-            this.btnLogout.Location = new System.Drawing.Point(1177, 956);
+            this.btnLogout.Location = new System.Drawing.Point(1105, 954);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(102, 44);
             this.btnLogout.TabIndex = 20;
             this.btnLogout.Text = "Logout";
             this.btnLogout.UseVisualStyleBackColor = true;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
             // panel1
             // 
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.lblChildCount);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(148, 330);
+            this.panel1.Location = new System.Drawing.Point(169, 340);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(229, 155);
+            this.panel1.Size = new System.Drawing.Size(229, 145);
             this.panel1.TabIndex = 21;
             // 
             // panel2
             // 
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.lblOrpCount);
-            this.panel2.Location = new System.Drawing.Point(639, 339);
+            this.panel2.Location = new System.Drawing.Point(567, 340);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(225, 146);
             this.panel2.TabIndex = 22;
             // 
             // panel3
             // 
+            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel3.Controls.Add(this.label3);
             this.panel3.Controls.Add(this.lblFouCount);
-            this.panel3.Location = new System.Drawing.Point(1089, 340);
+            this.panel3.Location = new System.Drawing.Point(969, 340);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(252, 145);
             this.panel3.TabIndex = 23;
             // 
             // panel4
             // 
+            this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel4.Controls.Add(this.label4);
             this.panel4.Controls.Add(this.lblOverdueCount);
-            this.panel4.Location = new System.Drawing.Point(627, 572);
+            this.panel4.Location = new System.Drawing.Point(553, 552);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(250, 148);
             this.panel4.TabIndex = 24;
             // 
             // frmAdminDashboard
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1536, 1166);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(192F, 192F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.AutoScroll = true;
+            this.ClientSize = new System.Drawing.Size(1374, 929);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
@@ -253,6 +264,7 @@
             this.Controls.Add(this.lblWelcome);
             this.Controls.Add(this.lblTitle);
             this.Name = "frmAdminDashboard";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmAdminDashboard";
             this.Load += new System.EventHandler(this.frmAdminDashboard_Load);
             this.panel1.ResumeLayout(false);

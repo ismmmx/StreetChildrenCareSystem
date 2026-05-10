@@ -107,7 +107,7 @@
             this.panel1.Controls.Add(this.label2);
             this.panel1.Location = new System.Drawing.Point(91, 184);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1336, 576);
+            this.panel1.Size = new System.Drawing.Size(1160, 576);
             this.panel1.TabIndex = 3;
             // 
             // label2
@@ -236,7 +236,7 @@
             this.dgvVaccinations.Name = "dgvVaccinations";
             this.dgvVaccinations.RowHeadersWidth = 82;
             this.dgvVaccinations.RowTemplate.Height = 33;
-            this.dgvVaccinations.Size = new System.Drawing.Size(1336, 480);
+            this.dgvVaccinations.Size = new System.Drawing.Size(1173, 480);
             this.dgvVaccinations.TabIndex = 9;
             // 
             // btnAddVaccination
@@ -331,9 +331,10 @@
             // 
             // frmChildProfile
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1528, 1864);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(192F, 192F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.AutoScroll = true;
+            this.ClientSize = new System.Drawing.Size(1374, 929);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnAddVaccination);
             this.Controls.Add(this.dgvVaccinations);
@@ -347,6 +348,7 @@
             this.Controls.Add(this.btnHome);
             this.Controls.Add(this.label1);
             this.Name = "frmChildProfile";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmChildProfile";
             this.Load += new System.EventHandler(this.frmChildProfile_Load);
             this.panel1.ResumeLayout(false);

@@ -130,6 +130,7 @@
             this.btnViewChildren.TabIndex = 5;
             this.btnViewChildren.Text = "View Children";
             this.btnViewChildren.UseVisualStyleBackColor = true;
+            this.btnViewChildren.Click += new System.EventHandler(this.btnViewChildren_Click);
             // 
             // btnViewOrphanage
             // 
@@ -166,6 +167,7 @@
             this.btnLogout.TabIndex = 9;
             this.btnLogout.Text = "Logout";
             this.btnLogout.UseVisualStyleBackColor = true;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
             // label2
             // 
@@ -207,7 +209,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1454, 1024);
+            this.AutoScroll = true;
+            this.ClientSize = new System.Drawing.Size(1374, 929);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnLogout);
             this.Controls.Add(this.btnViewVaccination);

@@ -97,17 +97,15 @@ namespace StreetChildrenCareSystem.Forms
 
         private void btnAddVaccination_Click(object sender, EventArgs e)
         {
-            // TODO: frmVaccination তৈরি হলে নিচের comment সরাও
             MessageBox.Show("Coming Soon!", "Info");
-            // frmVaccination f = new frmVaccination("Admin", childID);
-            // f.ShowDialog();
-            // LoadVaccinations();
         }
 
         private void btnBack_Click(object sender, EventArgs e)
         {
             this.Close();
         }
+
+        
     }
 }
 
