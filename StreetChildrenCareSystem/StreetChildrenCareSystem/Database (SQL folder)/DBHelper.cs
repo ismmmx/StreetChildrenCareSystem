@@ -6,15 +6,15 @@ using System.Windows.Forms;
 
 public class DBHelper
 {
-    // App.config থেকে নেওয়া হচ্ছে
-    // Hardcode করা হচ্ছে না 
+    // Get from config file
+    // Dynamic value 
     private static string connString =
         ConfigurationManager
         .ConnectionStrings
         ["StreetChildrenDB"]
         .ConnectionString;
 
-    // Connection দেওয়ার method
+    // Method to connect
     public static SqlConnection
         GetConnection()
     {
@@ -43,7 +43,7 @@ public class DBHelper
         }
     }
 
-    // Data দেখানোর জন্য
+    // To show data
     public static DataTable
         GetData(string query,
         SqlParameter[] parameters
@@ -66,7 +66,7 @@ public class DBHelper
         return dt;
     }
 
-    // Insert Update Delete এর জন্য
+    // To save, edit, or delete
     public static bool ExecuteQuery(
         string query,
         SqlParameter[] parameters
