@@ -46,18 +46,45 @@ namespace StreetChildrenCareSystem.Forms
 
         private void LoadOrphanageCombo()
         {
+            // 1. Fetch the data from the database
             DataTable dt = DBHelper.GetData("SELECT OrpID, OrpName FROM Orphanages");
+
+            // 2. Create a new dummy row with the same structure as the table
+            DataRow dr = dt.NewRow();
+            dr["OrpID"] = 0;              // Use 0 as the ID for 'None'
+            dr["OrpName"] = "-- None --"; // The text the user will see
+
+            // 3. Insert this row at the very top (index 0)
+            dt.Rows.InsertAt(dr, 0);
+
+            // 4. Bind to the ComboBox
             cmbOrphanage.DisplayMember = "OrpName";
             cmbOrphanage.ValueMember = "OrpID";
             cmbOrphanage.DataSource = dt;
+
+            /* DataTable dt = DBHelper.GetData("SELECT OrpID, OrpName FROM Orphanages");
+            cmbOrphanage.DisplayMember = "OrpName";
+            cmbOrphanage.ValueMember = "OrpID";
+            cmbOrphanage.DataSource = dt; */
         }
 
         private void LoadFoundationCombo()
         {
             DataTable dt = DBHelper.GetData("SELECT FouID, FouName FROM Foundations");
+
+            DataRow dr = dt.NewRow();
+            dr["FouID"] = 0;
+            dr["FouName"] = "-- None --";
+            dt.Rows.InsertAt(dr, 0);
+
             cmbFoundation.DisplayMember = "FouName";
             cmbFoundation.ValueMember = "FouID";
             cmbFoundation.DataSource = dt;
+
+            /* DataTable dt = DBHelper.GetData("SELECT FouID, FouName FROM Foundations");
+            cmbFoundation.DisplayMember = "FouName";
+            cmbFoundation.ValueMember = "FouID";
+            cmbFoundation.DataSource = dt; */
         }
 
         private void LoadChildren()
@@ -91,7 +118,7 @@ namespace StreetChildrenCareSystem.Forms
             dgvChildren.DataSource = dt;
         }
 
-        
+
         private void cmbSort_SelectedIndexChanged(object sender, EventArgs e)
         {
             string sortBy = "";
@@ -130,6 +157,9 @@ namespace StreetChildrenCareSystem.Forms
                 " FoundLocation, ChildStatus, OrpID, FouID)" +
                 " VALUES (@name, @age, @gender, @loc, @status, @orp, @fou)";
 
+            object orpIdParam = (int)cmbOrphanage.SelectedValue == 0 ? DBNull.Value : cmbOrphanage.SelectedValue;
+            object fouIdParam = (int)cmbFoundation.SelectedValue == 0 ? DBNull.Value : cmbFoundation.SelectedValue;
+
             SqlParameter[] p =
             {
                 new SqlParameter("@name", txtChildName.Text.Trim()),
@@ -137,9 +167,20 @@ namespace StreetChildrenCareSystem.Forms
                 new SqlParameter("@gender", cmbGender.Text),
                 new SqlParameter("@loc", txtLocation.Text.Trim()),
                 new SqlParameter("@status", cmbStatus.Text),
-                new SqlParameter("@orp", cmbOrphanage.SelectedValue),
-                new SqlParameter("@fou", cmbFoundation.SelectedValue)
-            };
+                new SqlParameter("@orp", orpIdParam), // Correctly handles NULL
+                new SqlParameter("@fou", fouIdParam)  // Correctly handles NULL
+};
+
+            /* SqlParameter[] p =
+             {
+                 new SqlParameter("@name", txtChildName.Text.Trim()),
+                 new SqlParameter("@age", (int)numAge.Value),
+                 new SqlParameter("@gender", cmbGender.Text),
+                 new SqlParameter("@loc", txtLocation.Text.Trim()),
+                 new SqlParameter("@status", cmbStatus.Text),
+                 new SqlParameter("@orp", cmbOrphanage.SelectedValue),
+                 new SqlParameter("@fou", cmbFoundation.SelectedValue)
+             }; */
 
             bool result = DBHelper.ExecuteQuery(query, p);
             if (result)
@@ -152,13 +193,29 @@ namespace StreetChildrenCareSystem.Forms
 
         private void dgvChildren_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+
             if (e.RowIndex >= 0)
             {
                 DataGridViewRow row = dgvChildren.Rows[e.RowIndex];
                 selectedChildID = Convert.ToInt32(row.Cells["ChildID"].Value);
                 txtChildName.Text = row.Cells["ChildName"].Value.ToString();
                 numAge.Value = Convert.ToDecimal(row.Cells["Age"].Value);
+
+                // Handle Orphanage ComboBox display
+                string orpName = row.Cells["OrpName"].Value.ToString();
+                cmbOrphanage.Text = string.IsNullOrEmpty(orpName) ? "-- None --" : orpName;
+
+                // Handle Foundation ComboBox display
+                string fouName = row.Cells["FouName"].Value.ToString();
+                cmbFoundation.Text = string.IsNullOrEmpty(fouName) ? "-- None --" : fouName;
             }
+            /*if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = dgvChildren.Rows[e.RowIndex];
+                selectedChildID = Convert.ToInt32(row.Cells["ChildID"].Value);
+                txtChildName.Text = row.Cells["ChildName"].Value.ToString();
+                numAge.Value = Convert.ToDecimal(row.Cells["Age"].Value);
+            } */
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
@@ -175,7 +232,24 @@ namespace StreetChildrenCareSystem.Forms
                 " ChildStatus = @status, OrpID = @orp, FouID = @fou" +
                 " WHERE ChildID = @id";
 
+            // Logic to handle Nulls for Orphanage and Foundation
+            object orpIdValue = (int)cmbOrphanage.SelectedValue == 0 ? DBNull.Value : cmbOrphanage.SelectedValue;
+            object fouIdValue = (int)cmbFoundation.SelectedValue == 0 ? DBNull.Value : cmbFoundation.SelectedValue;
+
             SqlParameter[] p =
+            {
+                new SqlParameter("@name", txtChildName.Text.Trim()),
+                new SqlParameter("@age", (int)numAge.Value),
+                new SqlParameter("@gender", cmbGender.Text),
+                new SqlParameter("@loc", txtLocation.Text.Trim()),
+                new SqlParameter("@status", cmbStatus.Text),
+                new SqlParameter("@orp", orpIdValue), // Uses DBNull if 0
+                new SqlParameter("@fou", fouIdValue), // Uses DBNull if 0
+                // If it's the update button, don't forget the ID:
+                 new SqlParameter("@id", selectedChildID) 
+            };
+
+            /*SqlParameter[] p =
             {
                 new SqlParameter("@name", txtChildName.Text.Trim()),
                 new SqlParameter("@age", (int)numAge.Value),
@@ -185,7 +259,7 @@ namespace StreetChildrenCareSystem.Forms
                 new SqlParameter("@orp", cmbOrphanage.SelectedValue),
                 new SqlParameter("@fou", cmbFoundation.SelectedValue),
                 new SqlParameter("@id", selectedChildID)
-            };
+            }; */
 
             bool result = DBHelper.ExecuteQuery(query, p);
             if (result)
@@ -254,6 +328,20 @@ namespace StreetChildrenCareSystem.Forms
             this.Close();
         }
 
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show(
+                "Are you sure to logout?", "Logout",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (result == DialogResult.Yes)
+            {
+                frmLogin login = new frmLogin();
+                login.Show();
+                this.Close();
+            }
+        }
+
         private void btnBack_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -263,6 +351,36 @@ namespace StreetChildrenCareSystem.Forms
         {
 
         }
+
+        /* private void LoadOrphanageCombo()
+         {
+             DataTable dt = DBHelper.GetData("SELECT OrpID, OrpName FROM Orphanages");
+
+             // Add a "None" option manually
+             DataRow dr = dt.NewRow();
+             dr["OrpID"] = 0; // Use 0 to represent 'No Selection'
+             dr["OrpName"] = "-- None / Not Applicable --";
+             dt.Rows.InsertAt(dr, 0);
+
+             cmbOrphanage.DisplayMember = "OrpName";
+             cmbOrphanage.ValueMember = "OrpID";
+             cmbOrphanage.DataSource = dt;
+         }
+
+         private void LoadFoundationCombo()
+         {
+             DataTable dt = DBHelper.GetData("SELECT FouID, FouName FROM Foundations");
+
+             // Add a "None" option manually
+             DataRow dr = dt.NewRow();
+             dr["FouID"] = 0;
+             dr["FouName"] = "-- None / Not Applicable --";
+             dt.Rows.InsertAt(dr, 0);
+
+             cmbFoundation.DisplayMember = "FouName";
+             cmbFoundation.ValueMember = "FouID";
+             cmbFoundation.DataSource = dt;
+         } */
     }
 }
 
@@ -683,17 +801,17 @@ namespace StreetChildrenCareSystem.Forms
         }
     }*/
 
-    /* public partial class frmChildren : Form
+/* public partial class frmChildren : Form
+{
+    public frmChildren()
     {
-        public frmChildren()
-        {
-            InitializeComponent();
-        }
-
-        private void frmChildren_Load(object sender, EventArgs e)
-        {
-
-        }
+        InitializeComponent();
     }
+
+    private void frmChildren_Load(object sender, EventArgs e)
+    {
+
+    }
+}
 }
 */

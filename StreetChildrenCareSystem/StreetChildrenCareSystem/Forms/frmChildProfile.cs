@@ -37,27 +37,26 @@ namespace StreetChildrenCareSystem.Forms
 
         private void LoadProfile()
         {
-            string query =
-                "SELECT C.*, O.OrpName, F.FouName" +
-                " FROM Children C" +
-                " LEFT JOIN Orphanages O ON C.OrpID = O.OrpID" +
-                " LEFT JOIN Foundations F ON C.FouID = F.FouID" +
-                " WHERE C.ChildID = @id";
+            string query = @"SELECT C.*, O.OrpName, F.FouName 
+                    FROM Children C 
+                    LEFT JOIN Orphanages O ON C.OrpID = O.OrpID 
+                    LEFT JOIN Foundations F ON C.FouID = F.FouID 
+                    WHERE C.ChildID = @id";
 
             SqlParameter[] p = { new SqlParameter("@id", childID) };
             DataTable dt = DBHelper.GetData(query, p);
 
-            if (dt.Rows.Count > 0)
+            if (dt != null && dt.Rows.Count > 0)
             {
                 DataRow row = dt.Rows[0];
-                lblChildID.Text = row["ChildID"].ToString();
-                lblName.Text = row["ChildName"].ToString();
-                lblAge.Text = row["Age"].ToString();
-                lblGender.Text = row["Gender"].ToString();
-                lblLocation.Text = row["FoundLocation"].ToString();
-                lblStatus.Text = row["ChildStatus"].ToString();
-                lblOrphanage.Text = row["OrpName"].ToString();
-                lblFoundation.Text = row["FouName"].ToString();
+                lblChildID.Text = "ID: " + row["ChildID"].ToString();
+                lblName.Text = "Name: " + row["ChildName"].ToString();
+                lblAge.Text = "Age: " + row["Age"].ToString();
+                lblGender.Text = "Gender: " + row["Gender"].ToString();
+                lblLocation.Text = "Found At: " + row["FoundLocation"].ToString();
+                lblStatus.Text = "Status: " + row["ChildStatus"].ToString();
+                lblOrphanage.Text = "Orphanage: " + (row["OrpName"] == DBNull.Value ? "N/A" : row["OrpName"].ToString());
+                lblFoundation.Text = "Foundation: " + (row["FouName"] == DBNull.Value ? "N/A" : row["FouName"].ToString());
             }
         }
 
@@ -105,7 +104,20 @@ namespace StreetChildrenCareSystem.Forms
             this.Close();
         }
 
-        
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show(
+                "Are you sure to logout?", "Logout",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (result == DialogResult.Yes)
+            {
+                frmLogin login = new frmLogin();
+                login.Show();
+                this.Close();
+            }
+        }
+
     }
 }
 

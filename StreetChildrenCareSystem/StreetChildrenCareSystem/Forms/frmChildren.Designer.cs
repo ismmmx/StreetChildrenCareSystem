@@ -56,7 +56,6 @@
             this.dgvChildren = new System.Windows.Forms.DataGridView();
             this.btnViewProfile = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
-            this.btnBack = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.numAge)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvChildren)).BeginInit();
             this.SuspendLayout();
@@ -78,6 +77,7 @@
             this.btnHome.TabIndex = 1;
             this.btnHome.Text = "Home";
             this.btnHome.UseVisualStyleBackColor = true;
+            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
             // 
             // btnLogout
             // 
@@ -87,6 +87,7 @@
             this.btnLogout.TabIndex = 3;
             this.btnLogout.Text = "Logout";
             this.btnLogout.UseVisualStyleBackColor = true;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
             // label2
             // 
@@ -207,7 +208,7 @@
             this.cmbStatus.FormattingEnabled = true;
             this.cmbStatus.Items.AddRange(new object[] {
             "Registered",
-            "In Orp.",
+            "In Orphanage",
             "Adopted"});
             this.cmbStatus.Location = new System.Drawing.Point(285, 514);
             this.cmbStatus.Name = "cmbStatus";
@@ -238,6 +239,7 @@
             this.btnSave.TabIndex = 26;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btnUpdate
             // 
@@ -247,6 +249,7 @@
             this.btnUpdate.TabIndex = 27;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnClear
             // 
@@ -267,12 +270,13 @@
             // 
             // btnSearch
             // 
-            this.btnSearch.Location = new System.Drawing.Point(768, 948);
+            this.btnSearch.Location = new System.Drawing.Point(776, 956);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(109, 47);
+            this.btnSearch.Size = new System.Drawing.Size(129, 119);
             this.btnSearch.TabIndex = 31;
             this.btnSearch.Text = "Search";
             this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // cmbSort
             // 
@@ -283,7 +287,7 @@
             "Sort by Age"});
             this.cmbSort.Location = new System.Drawing.Point(285, 1039);
             this.cmbSort.Name = "cmbSort";
-            this.cmbSort.Size = new System.Drawing.Size(263, 33);
+            this.cmbSort.Size = new System.Drawing.Size(462, 33);
             this.cmbSort.TabIndex = 32;
             // 
             // dgvChildren
@@ -295,6 +299,7 @@
             this.dgvChildren.RowTemplate.Height = 33;
             this.dgvChildren.Size = new System.Drawing.Size(1212, 494);
             this.dgvChildren.TabIndex = 33;
+            this.dgvChildren.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvChildren_CellClick);
             // 
             // btnViewProfile
             // 
@@ -304,6 +309,7 @@
             this.btnViewProfile.TabIndex = 34;
             this.btnViewProfile.Text = "View Profile";
             this.btnViewProfile.UseVisualStyleBackColor = true;
+            this.btnViewProfile.Click += new System.EventHandler(this.btnViewProfile_Click);
             // 
             // btnDelete
             // 
@@ -313,23 +319,14 @@
             this.btnDelete.TabIndex = 35;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = true;
-            // 
-            // btnBack
-            // 
-            this.btnBack.Location = new System.Drawing.Point(1035, 1653);
-            this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(137, 73);
-            this.btnBack.TabIndex = 37;
-            this.btnBack.Text = "Back";
-            this.btnBack.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // frmChildren
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(192F, 192F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(1374, 929);
-            this.Controls.Add(this.btnBack);
+            this.ClientSize = new System.Drawing.Size(1408, 929);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnViewProfile);
             this.Controls.Add(this.dgvChildren);
@@ -399,6 +396,5 @@
         private System.Windows.Forms.DataGridView dgvChildren;
         private System.Windows.Forms.Button btnViewProfile;
         private System.Windows.Forms.Button btnDelete;
-        private System.Windows.Forms.Button btnBack;
     }
 }
