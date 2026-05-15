@@ -326,7 +326,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(192F, 192F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(1408, 929);
+            this.ClientSize = new System.Drawing.Size(1374, 929);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnViewProfile);
             this.Controls.Add(this.dgvChildren);
