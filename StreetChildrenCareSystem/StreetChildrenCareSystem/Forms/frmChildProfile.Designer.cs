@@ -91,6 +91,7 @@
             // 
             // panel1
             // 
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.lblFoundation);
             this.panel1.Controls.Add(this.lblOrphanage);
             this.panel1.Controls.Add(this.lblStatus);
