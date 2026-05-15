@@ -13,11 +13,11 @@ namespace StreetChildrenCareSystem
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+      /*  private void button1_Click(object sender, EventArgs e)
         {
             btnLogin_Click(sender, e); // forward to real handler
         }
-
+      */
         private void btnLogin_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrWhiteSpace(txtUserID.Text))

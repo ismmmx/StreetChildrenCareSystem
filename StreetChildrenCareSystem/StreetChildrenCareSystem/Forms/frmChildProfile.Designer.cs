@@ -73,10 +73,11 @@
             // 
             this.btnHome.Location = new System.Drawing.Point(795, 38);
             this.btnHome.Name = "btnHome";
-            this.btnHome.Size = new System.Drawing.Size(133, 69);
+            this.btnHome.Size = new System.Drawing.Size(133, 67);
             this.btnHome.TabIndex = 1;
             this.btnHome.Text = "Home";
             this.btnHome.UseVisualStyleBackColor = true;
+            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
             // 
             // btnLogout
             // 
@@ -86,6 +87,7 @@
             this.btnLogout.TabIndex = 2;
             this.btnLogout.Text = "Logout";
             this.btnLogout.UseVisualStyleBackColor = true;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
             // panel1
             // 
@@ -268,7 +270,7 @@
             // 
             this.btnDeleteChild.Location = new System.Drawing.Point(708, 816);
             this.btnDeleteChild.Name = "btnDeleteChild";
-            this.btnDeleteChild.Size = new System.Drawing.Size(243, 87);
+            this.btnDeleteChild.Size = new System.Drawing.Size(233, 87);
             this.btnDeleteChild.TabIndex = 5;
             this.btnDeleteChild.Text = "Delete Child";
             this.btnDeleteChild.UseVisualStyleBackColor = true;
@@ -317,7 +319,7 @@
             // 
             this.btnAddVaccination.Location = new System.Drawing.Point(169, 1735);
             this.btnAddVaccination.Name = "btnAddVaccination";
-            this.btnAddVaccination.Size = new System.Drawing.Size(199, 96);
+            this.btnAddVaccination.Size = new System.Drawing.Size(233, 87);
             this.btnAddVaccination.TabIndex = 10;
             this.btnAddVaccination.Text = "Add Vaccination";
             this.btnAddVaccination.UseVisualStyleBackColor = true;
@@ -327,7 +329,7 @@
             // 
             this.btnBack.Location = new System.Drawing.Point(1065, 1735);
             this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(199, 96);
+            this.btnBack.Size = new System.Drawing.Size(233, 87);
             this.btnBack.TabIndex = 11;
             this.btnBack.Text = "Back";
             this.btnBack.UseVisualStyleBackColor = true;

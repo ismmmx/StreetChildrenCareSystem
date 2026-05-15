@@ -48,6 +48,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -149,7 +150,7 @@
             // 
             this.btnChildren.Location = new System.Drawing.Point(206, 810);
             this.btnChildren.Name = "btnChildren";
-            this.btnChildren.Size = new System.Drawing.Size(108, 46);
+            this.btnChildren.Size = new System.Drawing.Size(133, 67);
             this.btnChildren.TabIndex = 10;
             this.btnChildren.Text = "Children";
             this.btnChildren.UseVisualStyleBackColor = true;
@@ -159,7 +160,7 @@
             // 
             this.btnOrphanage.Location = new System.Drawing.Point(619, 810);
             this.btnOrphanage.Name = "btnOrphanage";
-            this.btnOrphanage.Size = new System.Drawing.Size(156, 46);
+            this.btnOrphanage.Size = new System.Drawing.Size(133, 67);
             this.btnOrphanage.TabIndex = 12;
             this.btnOrphanage.Text = "Orphanage";
             this.btnOrphanage.UseVisualStyleBackColor = true;
@@ -169,7 +170,7 @@
             // 
             this.btnFoundation.Location = new System.Drawing.Point(1073, 810);
             this.btnFoundation.Name = "btnFoundation";
-            this.btnFoundation.Size = new System.Drawing.Size(164, 66);
+            this.btnFoundation.Size = new System.Drawing.Size(133, 67);
             this.btnFoundation.TabIndex = 14;
             this.btnFoundation.Text = "Foundation";
             this.btnFoundation.UseVisualStyleBackColor = true;
@@ -177,9 +178,9 @@
             // 
             // btnVaccination
             // 
-            this.btnVaccination.Location = new System.Drawing.Point(187, 966);
+            this.btnVaccination.Location = new System.Drawing.Point(206, 931);
             this.btnVaccination.Name = "btnVaccination";
-            this.btnVaccination.Size = new System.Drawing.Size(148, 44);
+            this.btnVaccination.Size = new System.Drawing.Size(133, 67);
             this.btnVaccination.TabIndex = 16;
             this.btnVaccination.Text = "Vaccination";
             this.btnVaccination.UseVisualStyleBackColor = true;
@@ -187,9 +188,9 @@
             // 
             // btnManageUsers
             // 
-            this.btnManageUsers.Location = new System.Drawing.Point(663, 966);
+            this.btnManageUsers.Location = new System.Drawing.Point(619, 931);
             this.btnManageUsers.Name = "btnManageUsers";
-            this.btnManageUsers.Size = new System.Drawing.Size(112, 44);
+            this.btnManageUsers.Size = new System.Drawing.Size(133, 67);
             this.btnManageUsers.TabIndex = 18;
             this.btnManageUsers.Text = "Manage Users";
             this.btnManageUsers.UseVisualStyleBackColor = true;
@@ -197,9 +198,9 @@
             // 
             // btnLogout
             // 
-            this.btnLogout.Location = new System.Drawing.Point(1105, 954);
+            this.btnLogout.Location = new System.Drawing.Point(1073, 931);
             this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Size = new System.Drawing.Size(102, 44);
+            this.btnLogout.Size = new System.Drawing.Size(133, 67);
             this.btnLogout.TabIndex = 20;
             this.btnLogout.Text = "Logout";
             this.btnLogout.UseVisualStyleBackColor = true;
@@ -245,12 +246,22 @@
             this.panel4.Size = new System.Drawing.Size(250, 148);
             this.panel4.TabIndex = 24;
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(529, 1012);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(313, 25);
+            this.label5.TabIndex = 25;
+            this.label5.Text = "-------------------------------------------";
+            // 
             // frmAdminDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(192F, 192F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(1374, 929);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
@@ -302,5 +313,6 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Label label5;
     }
 }

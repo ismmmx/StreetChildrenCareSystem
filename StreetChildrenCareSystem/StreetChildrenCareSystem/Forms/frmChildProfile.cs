@@ -104,6 +104,11 @@ namespace StreetChildrenCareSystem.Forms
             this.Close();
         }
 
+        private void btnHome_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
         private void btnLogout_Click(object sender, EventArgs e)
         {
             DialogResult result = MessageBox.Show(

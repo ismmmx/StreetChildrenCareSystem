@@ -31,10 +31,13 @@
             this.label1 = new System.Windows.Forms.Label();
             this.lblWelcome = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
             this.lblChildCount = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
             this.lblOrpCount = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
             this.lblFouCount = new System.Windows.Forms.Label();
             this.btnViewChildren = new System.Windows.Forms.Button();
             this.btnViewOrphanage = new System.Windows.Forms.Button();
@@ -42,9 +45,7 @@
             this.btnViewVaccination = new System.Windows.Forms.Button();
             this.btnLogout = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -77,23 +78,14 @@
             this.panel1.Size = new System.Drawing.Size(306, 204);
             this.panel1.TabIndex = 2;
             // 
-            // panel2
+            // label3
             // 
-            this.panel2.Controls.Add(this.label4);
-            this.panel2.Controls.Add(this.lblOrpCount);
-            this.panel2.Location = new System.Drawing.Point(605, 334);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(292, 204);
-            this.panel2.TabIndex = 3;
-            // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.label5);
-            this.panel3.Controls.Add(this.lblFouCount);
-            this.panel3.Location = new System.Drawing.Point(1045, 334);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(246, 204);
-            this.panel3.TabIndex = 4;
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(111, 64);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(92, 25);
+            this.label3.TabIndex = 1;
+            this.label3.Text = "Children";
             // 
             // lblChildCount
             // 
@@ -104,6 +96,24 @@
             this.lblChildCount.TabIndex = 0;
             this.lblChildCount.Text = "00";
             // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.label4);
+            this.panel2.Controls.Add(this.lblOrpCount);
+            this.panel2.Location = new System.Drawing.Point(605, 334);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(292, 204);
+            this.panel2.TabIndex = 3;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(96, 64);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(119, 25);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "Orphanage";
+            // 
             // lblOrpCount
             // 
             this.lblOrpCount.AutoSize = true;
@@ -112,6 +122,24 @@
             this.lblOrpCount.Size = new System.Drawing.Size(36, 25);
             this.lblOrpCount.TabIndex = 1;
             this.lblOrpCount.Text = "00";
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.label5);
+            this.panel3.Controls.Add(this.lblFouCount);
+            this.panel3.Location = new System.Drawing.Point(1045, 334);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(246, 204);
+            this.panel3.TabIndex = 4;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(64, 64);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(120, 25);
+            this.label5.TabIndex = 3;
+            this.label5.Text = "Foundation";
             // 
             // lblFouCount
             // 
@@ -178,32 +206,14 @@
             this.label2.TabIndex = 10;
             this.label2.Text = "⚠️ Staff: View & Search Only";
             // 
-            // label3
+            // label6
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(111, 64);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(92, 25);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "Children";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(96, 64);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(119, 25);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Orphanage";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(64, 64);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(120, 25);
-            this.label5.TabIndex = 3;
-            this.label5.Text = "Foundation";
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(535, 996);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(313, 25);
+            this.label6.TabIndex = 11;
+            this.label6.Text = "-------------------------------------------";
             // 
             // frmStaffDashboard
             // 
@@ -211,6 +221,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(1374, 929);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnLogout);
             this.Controls.Add(this.btnViewVaccination);
@@ -254,5 +265,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
     }
 }
