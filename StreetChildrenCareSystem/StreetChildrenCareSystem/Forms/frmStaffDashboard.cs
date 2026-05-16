@@ -13,6 +13,7 @@ namespace StreetChildrenCareSystem.Forms
             InitializeComponent();
             loggedUserID = userID;
             lblWelcome.Text = "Welcome: " + userID;
+            this.Text = "frmStaffDashboard"; // set the title bar text
         }
 
         private void frmStaffDashboard_Load(object sender, EventArgs e)
@@ -47,8 +48,10 @@ namespace StreetChildrenCareSystem.Forms
 
         private void btnViewChildren_Click(object sender, EventArgs e)
         {
+            // Open Children form and hide the dashboard (don't close it)
             frmChildren f = new frmChildren("Staff", loggedUserID);
             f.Show();
+            this.Hide(); // Hide dashboard so it can be shown again when Home is clicked
         }
 
         private void btnLogout_Click(object sender, EventArgs e)
@@ -65,12 +68,17 @@ namespace StreetChildrenCareSystem.Forms
             }
         }
 
-       /* private void btnSwitchUser_Click(object sender, EventArgs e)
+        private void btnViewFoundation_Click(object sender, EventArgs e)
         {
-            frmLogin login = new frmLogin();
-            login.Show();
-            this.Close();
-        }*/
+
+        }
+
+        /* private void btnSwitchUser_Click(object sender, EventArgs e)
+         {
+             frmLogin login = new frmLogin();
+             login.Show();
+             this.Close();
+         }*/
     }
 }
 

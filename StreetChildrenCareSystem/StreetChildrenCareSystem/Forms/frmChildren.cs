@@ -20,10 +20,27 @@ namespace StreetChildrenCareSystem.Forms
 
         private void frmChildren_Load(object sender, EventArgs e)
         {
+           /* try
+            {
+                // Load all data when form opens
+                SetPermissions();
+                LoadProfile();
+                LoadVaccinations();
+            }
+            catch (Exception ex)
+            {
+                // If any error happens, show the message so we can see what went wrong
+                MessageBox.Show("Error loading profile: " + ex.Message, "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                this.Close(); // Close this form if data could not load
+            } */
+
             SetPermissions();
             LoadOrphanageCombo();
             LoadFoundationCombo();
             LoadChildren();
+
+            dgvChildren.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
 
         private void SetPermissions()
@@ -194,7 +211,45 @@ namespace StreetChildrenCareSystem.Forms
         private void dgvChildren_CellClick(object sender, DataGridViewCellEventArgs e)
         {
 
+            // নিশ্চিত হওয়া যে ব্যবহারকারী হেডার বাদ দিয়ে একটি সঠিক ডাটা রো-তে ক্লিক করেছেন
             if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = dgvChildren.Rows[e.RowIndex];
+
+                // ১. ChildID চেক করা : ডাটাবেজে এটি DBNull হলে ডিফল্ট ০ বসবে
+                if (row.Cells["ChildID"].Value != DBNull.Value && row.Cells["ChildID"].Value != null)
+                {
+                    selectedChildID = Convert.ToInt32(row.Cells["ChildID"].Value);
+                }
+                else
+                {
+                    selectedChildID = 0; // কোনো আইডি না থাকলে ০ সেট হবে
+                }
+
+                // ২. ChildName চেক করা: Convert.ToString ব্যবহার করলে null থাকলেও ক্র্যাশ করবে না
+                txtChildName.Text = Convert.ToString(row.Cells["ChildName"].Value);
+
+                // ৩. Age চেক করা: বয়স ফাকা থাকলে যেন ক্র্যাশ না করে
+                if (row.Cells["Age"].Value != DBNull.Value && row.Cells["Age"].Value != null)
+                {
+                    numAge.Value = Convert.ToDecimal(row.Cells["Age"].Value);
+                }
+                else
+                {
+                    numAge.Value = 0; // বয়স ফাকা থাকলে ডিফল্ট ০
+                }
+
+                // ৪. Orphanage ComboBox প্রদর্শন হ্যান্ডেল করা
+                string orpName = Convert.ToString(row.Cells["OrpName"].Value);
+                cmbOrphanage.Text = string.IsNullOrEmpty(orpName) ? "-- None --" : orpName;
+
+                // ৫. Foundation ComboBox প্রদর্শন হ্যান্ডেল করা
+                string fouName = Convert.ToString(row.Cells["FouName"].Value);
+                cmbFoundation.Text = string.IsNullOrEmpty(fouName) ? "-- None --" : fouName;
+            }
+
+
+            /* if (e.RowIndex >= 0)
             {
                 DataGridViewRow row = dgvChildren.Rows[e.RowIndex];
                 selectedChildID = Convert.ToInt32(row.Cells["ChildID"].Value);
@@ -208,7 +263,7 @@ namespace StreetChildrenCareSystem.Forms
                 // Handle Foundation ComboBox display
                 string fouName = row.Cells["FouName"].Value.ToString();
                 cmbFoundation.Text = string.IsNullOrEmpty(fouName) ? "-- None --" : fouName;
-            }
+            } */
             /*if (e.RowIndex >= 0)
             {
                 DataGridViewRow row = dgvChildren.Rows[e.RowIndex];
@@ -309,8 +364,19 @@ namespace StreetChildrenCareSystem.Forms
                 return;
             }
 
-            frmChildProfile f = new frmChildProfile(selectedChildID, userRole);
+            // Create the profile form with all 3 required values
+            frmChildProfile f = new frmChildProfile(selectedChildID, userRole, userID);
             f.Show();
+
+            // Only hide this form if profile form is actually visible and open
+            // This prevents the "everything vanishes" bug
+            if (f.Visible)
+            {
+                this.Hide();
+            }
+            /*
+            frmChildProfile f = new frmChildProfile(selectedChildID, userRole);
+            f.Show(); */
         }
 
         private void ClearForm()
@@ -325,7 +391,16 @@ namespace StreetChildrenCareSystem.Forms
 
         private void btnHome_Click(object sender, EventArgs e)
         {
-            this.Close();
+            // Find the hidden dashboard form and show it
+            foreach (Form openForm in Application.OpenForms)
+            {
+                if (openForm is frmAdminDashboard || openForm is frmStaffDashboard)
+                {
+                    openForm.Show(); // Show the dashboard that was hidden
+                    break;
+                }
+            }
+            this.Close(); // Close frmChildren
         }
 
         private void btnLogout_Click(object sender, EventArgs e)
@@ -344,7 +419,23 @@ namespace StreetChildrenCareSystem.Forms
 
         private void btnBack_Click(object sender, EventArgs e)
         {
-            this.Close();
+            // Back button does the same as Home in this form (goes to Dashboard)
+            foreach (Form openForm in Application.OpenForms)
+            {
+                if (openForm is frmAdminDashboard || openForm is frmStaffDashboard)
+                {
+                    openForm.Show(); // Show the dashboard that was hidden
+                    break;
+                }
+            }
+            this.Close(); // Close frmChildren
+        }
+
+        // Public method so frmChildProfile can call it to refresh the list after delete
+        public void RefreshChildList()
+        {
+            LoadChildren();
+            ClearForm();
         }
 
         private void btnClear_Click(object sender, EventArgs e)
