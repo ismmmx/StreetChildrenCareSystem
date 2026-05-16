@@ -67,10 +67,27 @@ namespace StreetChildrenCareSystem.Forms
                 this.Close();
             }
         }
+        private void btnViewOrphanage_Click(object sender, EventArgs e)
+        {
+            // Staff can view Orphanage in read-only mode
+            frmOrphanage f = new frmOrphanage("Staff", loggedUserID);
+            f.Show();
+            this.Hide();
+        }
 
+        private void btnViewVaccination_Click(object sender, EventArgs e)
+        {
+            // Staff can view Vaccination records in read-only mode
+            frmVaccination f = new frmVaccination("Staff");
+            f.Show();
+            this.Hide();
+        }
         private void btnViewFoundation_Click(object sender, EventArgs e)
         {
-
+            // Staff can view Foundation in read-only mode
+            frmFoundation f = new frmFoundation("Staff", loggedUserID);
+            f.Show();
+            this.Hide();
         }
 
         /* private void btnSwitchUser_Click(object sender, EventArgs e)

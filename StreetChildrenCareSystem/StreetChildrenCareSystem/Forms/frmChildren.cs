@@ -440,7 +440,9 @@ namespace StreetChildrenCareSystem.Forms
 
         private void btnClear_Click(object sender, EventArgs e)
         {
-
+            // Clear all input fields and reload the full list
+            ClearForm();
+            LoadChildren();
         }
 
         /* private void LoadOrphanageCombo()

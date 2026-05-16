@@ -119,7 +119,10 @@ namespace StreetChildrenCareSystem.Forms
         // Add vaccination button (coming soon)
         private void btnAddVaccination_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Coming Soon!", "Info");
+            // Open Vaccination form so Admin can add vaccination for this child
+            frmVaccination f = new frmVaccination(userRole);
+            f.Show();
+            this.Hide();
         }
 
         // Home button: close profile AND children form, go back to dashboard
