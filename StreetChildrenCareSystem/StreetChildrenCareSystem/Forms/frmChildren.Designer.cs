@@ -56,22 +56,25 @@
             this.dgvChildren = new System.Windows.Forms.DataGridView();
             this.btnViewProfile = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
+            this.label11 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.numAge)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvChildren)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(65, 58);
+            this.label1.Location = new System.Drawing.Point(91, 66);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(229, 25);
+            this.label1.Size = new System.Drawing.Size(289, 37);
             this.label1.TabIndex = 0;
             this.label1.Text = "Children Management ";
             // 
             // btnHome
             // 
-            this.btnHome.Location = new System.Drawing.Point(879, 48);
+            this.btnHome.Location = new System.Drawing.Point(861, 48);
             this.btnHome.Name = "btnHome";
             this.btnHome.Size = new System.Drawing.Size(177, 73);
             this.btnHome.TabIndex = 1;
@@ -81,7 +84,7 @@
             // 
             // btnLogout
             // 
-            this.btnLogout.Location = new System.Drawing.Point(1131, 48);
+            this.btnLogout.Location = new System.Drawing.Point(1107, 48);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(156, 73);
             this.btnLogout.TabIndex = 3;
@@ -92,96 +95,96 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(129, 256);
+            this.label2.Location = new System.Drawing.Point(116, 256);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(129, 25);
+            this.label2.Size = new System.Drawing.Size(170, 37);
             this.label2.TabIndex = 4;
-            this.label2.Text = "ChildName :";
+            this.label2.Text = "Child Name :";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(753, 256);
+            this.label3.Location = new System.Drawing.Point(811, 256);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(62, 25);
+            this.label3.Size = new System.Drawing.Size(77, 37);
             this.label3.TabIndex = 5;
             this.label3.Text = "Age :";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(129, 959);
+            this.label4.Location = new System.Drawing.Point(40, 30);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(92, 25);
+            this.label4.Size = new System.Drawing.Size(108, 37);
             this.label4.TabIndex = 7;
             this.label4.Text = "Search :";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(129, 347);
+            this.label5.Location = new System.Drawing.Point(116, 347);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(95, 25);
+            this.label5.Size = new System.Drawing.Size(117, 37);
             this.label5.TabIndex = 9;
             this.label5.Text = "Gender :";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(129, 433);
+            this.label6.Location = new System.Drawing.Point(116, 436);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(106, 25);
+            this.label6.Size = new System.Drawing.Size(132, 37);
             this.label6.TabIndex = 11;
             this.label6.Text = "Location :";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(129, 523);
+            this.label7.Location = new System.Drawing.Point(116, 523);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(85, 25);
+            this.label7.Size = new System.Drawing.Size(101, 37);
             this.label7.TabIndex = 13;
             this.label7.Text = "Status :";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(129, 617);
+            this.label8.Location = new System.Drawing.Point(116, 617);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(131, 25);
+            this.label8.Size = new System.Drawing.Size(163, 37);
             this.label8.TabIndex = 15;
             this.label8.Text = "Orphanage :";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(129, 711);
+            this.label9.Location = new System.Drawing.Point(116, 711);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(132, 25);
+            this.label9.Size = new System.Drawing.Size(166, 37);
             this.label9.TabIndex = 17;
             this.label9.Text = "Foundation :";
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(129, 1042);
+            this.label10.Location = new System.Drawing.Point(40, 112);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(63, 25);
+            this.label10.Size = new System.Drawing.Size(78, 37);
             this.label10.TabIndex = 18;
             this.label10.Text = "Sort :";
             // 
             // txtChildName
             // 
-            this.txtChildName.Location = new System.Drawing.Point(285, 256);
+            this.txtChildName.Location = new System.Drawing.Point(298, 253);
             this.txtChildName.Name = "txtChildName";
-            this.txtChildName.Size = new System.Drawing.Size(426, 31);
+            this.txtChildName.Size = new System.Drawing.Size(426, 43);
             this.txtChildName.TabIndex = 19;
             // 
             // numAge
             // 
-            this.numAge.Location = new System.Drawing.Point(837, 256);
+            this.numAge.Location = new System.Drawing.Point(894, 253);
             this.numAge.Name = "numAge";
-            this.numAge.Size = new System.Drawing.Size(120, 31);
+            this.numAge.Size = new System.Drawing.Size(120, 43);
             this.numAge.TabIndex = 20;
             // 
             // cmbGender
@@ -191,16 +194,16 @@
             "Male",
             "Female",
             "Other"});
-            this.cmbGender.Location = new System.Drawing.Point(285, 339);
+            this.cmbGender.Location = new System.Drawing.Point(298, 339);
             this.cmbGender.Name = "cmbGender";
-            this.cmbGender.Size = new System.Drawing.Size(221, 33);
+            this.cmbGender.Size = new System.Drawing.Size(221, 45);
             this.cmbGender.TabIndex = 21;
             // 
             // txtLocation
             // 
-            this.txtLocation.Location = new System.Drawing.Point(285, 427);
+            this.txtLocation.Location = new System.Drawing.Point(298, 430);
             this.txtLocation.Name = "txtLocation";
-            this.txtLocation.Size = new System.Drawing.Size(672, 31);
+            this.txtLocation.Size = new System.Drawing.Size(672, 43);
             this.txtLocation.TabIndex = 22;
             // 
             // cmbStatus
@@ -210,25 +213,25 @@
             "Registered",
             "In Orphanage",
             "Adopted"});
-            this.cmbStatus.Location = new System.Drawing.Point(285, 514);
+            this.cmbStatus.Location = new System.Drawing.Point(298, 515);
             this.cmbStatus.Name = "cmbStatus";
-            this.cmbStatus.Size = new System.Drawing.Size(221, 33);
+            this.cmbStatus.Size = new System.Drawing.Size(221, 45);
             this.cmbStatus.TabIndex = 23;
             // 
             // cmbOrphanage
             // 
             this.cmbOrphanage.FormattingEnabled = true;
-            this.cmbOrphanage.Location = new System.Drawing.Point(285, 617);
+            this.cmbOrphanage.Location = new System.Drawing.Point(298, 617);
             this.cmbOrphanage.Name = "cmbOrphanage";
-            this.cmbOrphanage.Size = new System.Drawing.Size(426, 33);
+            this.cmbOrphanage.Size = new System.Drawing.Size(426, 45);
             this.cmbOrphanage.TabIndex = 24;
             // 
             // cmbFoundation
             // 
             this.cmbFoundation.FormattingEnabled = true;
-            this.cmbFoundation.Location = new System.Drawing.Point(285, 711);
+            this.cmbFoundation.Location = new System.Drawing.Point(298, 711);
             this.cmbFoundation.Name = "cmbFoundation";
-            this.cmbFoundation.Size = new System.Drawing.Size(426, 33);
+            this.cmbFoundation.Size = new System.Drawing.Size(426, 45);
             this.cmbFoundation.TabIndex = 25;
             // 
             // btnSave
@@ -263,16 +266,16 @@
             // 
             // txtSearch
             // 
-            this.txtSearch.Location = new System.Drawing.Point(285, 956);
+            this.txtSearch.Location = new System.Drawing.Point(154, 30);
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(462, 31);
+            this.txtSearch.Size = new System.Drawing.Size(476, 43);
             this.txtSearch.TabIndex = 30;
             // 
             // btnSearch
             // 
-            this.btnSearch.Location = new System.Drawing.Point(776, 956);
+            this.btnSearch.Location = new System.Drawing.Point(669, 30);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(129, 119);
+            this.btnSearch.Size = new System.Drawing.Size(148, 133);
             this.btnSearch.TabIndex = 31;
             this.btnSearch.Text = "Search";
             this.btnSearch.UseVisualStyleBackColor = true;
@@ -285,15 +288,15 @@
             "Sort by Name",
             "Sort by Status",
             "Sort by Age"});
-            this.cmbSort.Location = new System.Drawing.Point(285, 1039);
+            this.cmbSort.Location = new System.Drawing.Point(154, 112);
             this.cmbSort.Name = "cmbSort";
-            this.cmbSort.Size = new System.Drawing.Size(462, 33);
+            this.cmbSort.Size = new System.Drawing.Size(476, 45);
             this.cmbSort.TabIndex = 32;
             // 
             // dgvChildren
             // 
             this.dgvChildren.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvChildren.Location = new System.Drawing.Point(74, 1126);
+            this.dgvChildren.Location = new System.Drawing.Point(74, 1144);
             this.dgvChildren.Name = "dgvChildren";
             this.dgvChildren.RowHeadersWidth = 82;
             this.dgvChildren.RowTemplate.Height = 33;
@@ -303,9 +306,9 @@
             // 
             // btnViewProfile
             // 
-            this.btnViewProfile.Location = new System.Drawing.Point(134, 1653);
+            this.btnViewProfile.Location = new System.Drawing.Point(160, 1663);
             this.btnViewProfile.Name = "btnViewProfile";
-            this.btnViewProfile.Size = new System.Drawing.Size(128, 72);
+            this.btnViewProfile.Size = new System.Drawing.Size(186, 118);
             this.btnViewProfile.TabIndex = 34;
             this.btnViewProfile.Text = "View Profile";
             this.btnViewProfile.UseVisualStyleBackColor = true;
@@ -313,26 +316,48 @@
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(604, 1653);
+            this.btnDelete.Location = new System.Drawing.Point(570, 1663);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(143, 75);
+            this.btnDelete.Size = new System.Drawing.Size(186, 118);
             this.btnDelete.TabIndex = 35;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = true;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(563, 1784);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(193, 37);
+            this.label11.TabIndex = 36;
+            this.label11.Text = "----------------";
+            // 
+            // panel1
+            // 
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.label10);
+            this.panel1.Controls.Add(this.txtSearch);
+            this.panel1.Controls.Add(this.cmbSort);
+            this.panel1.Controls.Add(this.btnSearch);
+            this.panel1.Location = new System.Drawing.Point(74, 928);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1212, 188);
+            this.panel1.TabIndex = 37;
             // 
             // frmChildren
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(192F, 192F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(1408, 929);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(247)))), ((int)(((byte)(240)))));
+            this.ClientSize = new System.Drawing.Size(1374, 929);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.label11);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnViewProfile);
             this.Controls.Add(this.dgvChildren);
-            this.Controls.Add(this.cmbSort);
-            this.Controls.Add(this.btnSearch);
-            this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.btnSave);
@@ -343,24 +368,27 @@
             this.Controls.Add(this.cmbGender);
             this.Controls.Add(this.numAge);
             this.Controls.Add(this.txtChildName);
-            this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnLogout);
             this.Controls.Add(this.btnHome);
             this.Controls.Add(this.label1);
+            this.Font = new System.Drawing.Font("Segoe UI", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "frmChildren";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmChildren";
             this.Load += new System.EventHandler(this.frmChildren_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numAge)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvChildren)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -396,5 +424,7 @@
         private System.Windows.Forms.DataGridView dgvChildren;
         private System.Windows.Forms.Button btnViewProfile;
         private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Panel panel1;
     }
 }

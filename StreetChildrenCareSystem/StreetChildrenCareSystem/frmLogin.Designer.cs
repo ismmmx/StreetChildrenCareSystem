@@ -35,53 +35,54 @@
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.btnLogin = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(519, 124);
+            this.label1.Location = new System.Drawing.Point(495, 122);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(284, 25);
+            this.label1.Size = new System.Drawing.Size(343, 37);
             this.label1.TabIndex = 0;
             this.label1.Text = "Street Children Care System";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(778, 312);
+            this.label2.Location = new System.Drawing.Point(602, 355);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(101, 25);
+            this.label2.Size = new System.Drawing.Size(123, 37);
             this.label2.TabIndex = 2;
             this.label2.Text = "User ID  :";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(761, 446);
+            this.label3.Location = new System.Drawing.Point(602, 474);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(118, 25);
+            this.label3.Size = new System.Drawing.Size(141, 37);
             this.label3.TabIndex = 4;
             this.label3.Text = "Password :";
             // 
             // txtUserID
             // 
-            this.txtUserID.Location = new System.Drawing.Point(964, 306);
+            this.txtUserID.Location = new System.Drawing.Point(761, 352);
             this.txtUserID.Name = "txtUserID";
-            this.txtUserID.Size = new System.Drawing.Size(382, 31);
+            this.txtUserID.Size = new System.Drawing.Size(491, 43);
             this.txtUserID.TabIndex = 5;
             // 
             // txtPassword
             // 
-            this.txtPassword.Location = new System.Drawing.Point(964, 443);
+            this.txtPassword.Location = new System.Drawing.Point(761, 471);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
-            this.txtPassword.Size = new System.Drawing.Size(390, 31);
+            this.txtPassword.Size = new System.Drawing.Size(491, 43);
             this.txtPassword.TabIndex = 7;
             // 
             // btnLogin
             // 
-            this.btnLogin.Location = new System.Drawing.Point(766, 691);
+            this.btnLogin.Location = new System.Drawing.Point(720, 721);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(167, 67);
             this.btnLogin.TabIndex = 8;
@@ -91,7 +92,7 @@
             // 
             // btnExit
             // 
-            this.btnExit.Location = new System.Drawing.Point(1171, 691);
+            this.btnExit.Location = new System.Drawing.Point(1023, 721);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(175, 67);
             this.btnExit.TabIndex = 10;
@@ -99,11 +100,22 @@
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(537, 600);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(788, 37);
+            this.label4.TabIndex = 11;
+            this.label4.Text = "System will automatically detect Admin or Staff access after login.";
+            // 
             // frmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(192F, 192F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.ClientSize = new System.Drawing.Size(1432, 851);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(247)))), ((int)(((byte)(240)))));
+            this.ClientSize = new System.Drawing.Size(1374, 929);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.txtPassword);
@@ -111,6 +123,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Font = new System.Drawing.Font("Segoe UI", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "frmLogin";
@@ -131,6 +144,7 @@
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.Label label4;
     }
 }
 

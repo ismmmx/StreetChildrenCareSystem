@@ -13,6 +13,7 @@ namespace StreetChildrenCareSystem.Forms
             InitializeComponent();
             loggedUserID = userID;
             lblWelcome.Text = "Welcome: " + userID;
+            this.Text = "frmStaffDashboard"; // set the title bar text
         }
 
         private void frmStaffDashboard_Load(object sender, EventArgs e)
@@ -47,8 +48,10 @@ namespace StreetChildrenCareSystem.Forms
 
         private void btnViewChildren_Click(object sender, EventArgs e)
         {
+            // Open Children form and hide the dashboard (don't close it)
             frmChildren f = new frmChildren("Staff", loggedUserID);
             f.Show();
+            this.Hide(); // Hide dashboard so it can be shown again when Home is clicked
         }
 
         private void btnLogout_Click(object sender, EventArgs e)
@@ -64,13 +67,35 @@ namespace StreetChildrenCareSystem.Forms
                 this.Close();
             }
         }
-
-       /* private void btnSwitchUser_Click(object sender, EventArgs e)
+        private void btnViewOrphanage_Click(object sender, EventArgs e)
         {
-            frmLogin login = new frmLogin();
-            login.Show();
-            this.Close();
-        }*/
+            // Staff can view Orphanage in read-only mode
+            frmOrphanage f = new frmOrphanage("Staff", loggedUserID);
+            f.Show();
+            this.Hide();
+        }
+
+        private void btnViewVaccination_Click(object sender, EventArgs e)
+        {
+            // Staff can view Vaccination records in read-only mode
+            frmVaccination f = new frmVaccination("Staff");
+            f.Show();
+            this.Hide();
+        }
+        private void btnViewFoundation_Click(object sender, EventArgs e)
+        {
+            // Staff can view Foundation in read-only mode
+            frmFoundation f = new frmFoundation("Staff", loggedUserID);
+            f.Show();
+            this.Hide();
+        }
+
+        /* private void btnSwitchUser_Click(object sender, EventArgs e)
+         {
+             frmLogin login = new frmLogin();
+             login.Show();
+             this.Close();
+         }*/
     }
 }
 

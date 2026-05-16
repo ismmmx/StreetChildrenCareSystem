@@ -49,28 +49,42 @@ namespace StreetChildrenCareSystem.Forms
 
         private void btnChildren_Click(object sender, EventArgs e)
         {
+            // Open Children form and hide the dashboard (don't close it)
             frmChildren f = new frmChildren("Admin", loggedUserID);
             f.Show();
+            this.Hide(); // Hide dashboard so it can be shown again when Home is clicked
         }
 
         private void btnOrphanage_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Coming Soon!", "Info");
+            // Open Orphanage form and hide dashboard
+            frmOrphanage f = new frmOrphanage("Admin", loggedUserID);
+            f.Show();
+            this.Hide();
         }
 
         private void btnFoundation_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Coming Soon!", "Info");
+            // Open Foundation form and hide dashboard
+            frmFoundation f = new frmFoundation("Admin", loggedUserID);
+            f.Show();
+            this.Hide();
         }
 
         private void btnVaccination_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Coming Soon!", "Info");
+            // Open Vaccination form and hide dashboard
+            frmVaccination f = new frmVaccination("Admin");
+            f.Show();
+            this.Hide();
         }
 
         private void btnManageUsers_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Coming Soon!", "Info");
+            // Open Manage Users form and hide dashboard (Admin only)
+            frmManageUsers f = new frmManageUsers();
+            f.Show();
+            this.Hide();
         }
 
         private void btnLogout_Click(object sender, EventArgs e)

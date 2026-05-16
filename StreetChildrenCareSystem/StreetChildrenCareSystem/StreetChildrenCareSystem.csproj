@@ -173,11 +173,35 @@
     <Compile Include="Forms\frmChildren.Designer.cs">
       <DependentUpon>frmChildren.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\frmFoundation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmFoundation.Designer.cs">
+      <DependentUpon>frmFoundation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmManageUsers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmManageUsers.Designer.cs">
+      <DependentUpon>frmManageUsers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmOrphanage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmOrphanage.Designer.cs">
+      <DependentUpon>frmOrphanage.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\frmStaffDashboard.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\frmStaffDashboard.Designer.cs">
       <DependentUpon>frmStaffDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmVaccination.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmVaccination.Designer.cs">
+      <DependentUpon>frmVaccination.cs</DependentUpon>
     </Compile>
     <Compile Include="frmLogin.cs">
       <SubType>Form</SubType>
@@ -198,8 +222,20 @@
     <EmbeddedResource Include="Forms\frmChildren.resx">
       <DependentUpon>frmChildren.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmFoundation.resx">
+      <DependentUpon>frmFoundation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmManageUsers.resx">
+      <DependentUpon>frmManageUsers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmOrphanage.resx">
+      <DependentUpon>frmOrphanage.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmStaffDashboard.resx">
       <DependentUpon>frmStaffDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmVaccination.resx">
+      <DependentUpon>frmVaccination.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
