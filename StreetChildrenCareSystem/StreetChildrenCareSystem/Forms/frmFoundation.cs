@@ -18,7 +18,7 @@ namespace StreetChildrenCareSystem.Forms
         private int selectedFouID = 0;
 
         public frmFoundation(
-            string role, string uid)
+               string role, string uid)
         {
             InitializeComponent();
             userRole = role;
@@ -26,10 +26,18 @@ namespace StreetChildrenCareSystem.Forms
         }
 
         private void frmFoundation_Load(
-            object sender, EventArgs e)
+        object sender, EventArgs e)
         {
             SetPermissions();
             LoadFoundations();
+
+            // Fix: make columns fill the full width of the DataGridView
+            dgvFoundation.AutoSizeColumnsMode =
+                DataGridViewAutoSizeColumnsMode.Fill;
+
+            // SupportType ComboBox
+            cmbSupportType.Items.Add("Food");
+
 
             // SupportType ComboBox
             cmbSupportType.Items.Add("Food");
@@ -274,26 +282,45 @@ namespace StreetChildrenCareSystem.Forms
         private void btnBack_Click(
             object sender, EventArgs e)
         {
-            this.Close();
+            // Find the hidden dashboard form and show it
+            foreach (Form openForm in Application.OpenForms)
+            {
+                if (openForm is frmAdminDashboard || openForm is frmStaffDashboard)
+                {
+                    openForm.Show(); // Show the dashboard that was hidden
+                    break;
+                }
+            }
+            this.Close(); // Close
         }
 
         private void btnHome_Click(
             object sender, EventArgs e)
         {
-            this.Close();
+            // Find the hidden dashboard form and show it
+            foreach (Form openForm in Application.OpenForms)
+            {
+                if (openForm is frmAdminDashboard || openForm is frmStaffDashboard)
+                {
+                    openForm.Show(); // Show the dashboard that was hidden
+                    break;
+                }
+            }
+            this.Close(); // Close 
+        }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show(
+                "Are you sure to logout?", "Logout",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (result == DialogResult.Yes)
+            {
+                frmLogin login = new frmLogin();
+                login.Show();
+                this.Close();
+            }
         }
     }
-
-    /*public partial class frmFoundation : Form
-    {
-        public frmFoundation()
-        {
-            InitializeComponent();
-        }
-
-        private void frmFoundation_Load(object sender, EventArgs e)
-        {
-
-        }
-    }*/
 }

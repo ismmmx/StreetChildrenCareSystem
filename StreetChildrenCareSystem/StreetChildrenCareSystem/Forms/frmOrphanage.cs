@@ -287,25 +287,3 @@ namespace StreetChildrenCareSystem.Forms
     }
 }
 
-/*
-namespace StreetChildrenCareSystem.Forms
-{
-    public partial class frmOrphanage : Form
-    {
-        public frmOrphanage()
-        {
-            InitializeComponent();
-        }
-
-        private void frmOrphanage_Load(object sender, EventArgs e)
-        {
-
-        }
-    }
-}
-
-using System;
-using System.Data;
-using System.Data.SqlClient;
-using System.Windows.Forms;
-*/

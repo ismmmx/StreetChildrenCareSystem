@@ -101,12 +101,12 @@ namespace StreetChildrenCareSystem.Forms
             }
         }
 
-       /* private void btnSwitchUser_Click(object sender, EventArgs e)
-        {
-            frmLogin login = new frmLogin();
-            login.Show();
-            this.Close();
-        } */
+        /* private void btnSwitchUser_Click(object sender, EventArgs e)
+         {
+             frmLogin login = new frmLogin();
+             login.Show();
+             this.Close();
+         } */
 
         private void label4_Click(object sender, EventArgs e)
         {

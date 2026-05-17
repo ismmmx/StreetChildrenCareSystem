@@ -151,19 +151,38 @@ namespace StreetChildrenCareSystem.Forms
         {
             string kw = txtSearch.Text.Trim();
 
+            // If search box is empty, reload all users
+            if (string.IsNullOrEmpty(kw))
+            {
+                LoadUsers();
+                return;
+            }
+
             DataTable dt = DBHelper.GetData(
                 "SELECT UserID, Password, UserRole FROM Users" +
                 " WHERE UserID LIKE @kw OR UserRole LIKE @kw",
                 new SqlParameter[] { new SqlParameter("@kw", "%" + kw + "%") });
 
             dgvUsers.DataSource = dt;
+
+            if (dt.Rows.Count == 0)
+                MessageBox.Show("No users found matching: " + kw);
         }
 
         // Sort the list
         private void cmbSort_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string sortBy = cmbSort.Text == "Sort by Role" ?
-                "UserRole ASC" : "UserID ASC";
+            // Ignore if nothing is selected yet
+            if (string.IsNullOrEmpty(cmbSort.Text)) return;
+
+            string sortBy = "";
+
+            if (cmbSort.Text == "Sort by Role")
+                sortBy = "UserRole ASC";
+            else if (cmbSort.Text == "Sort by UserID")
+                sortBy = "UserID ASC";
+
+            if (sortBy == "") return;
 
             DataTable dt = DBHelper.GetData(
                 "SELECT UserID, Password, UserRole" +
@@ -214,6 +233,28 @@ namespace StreetChildrenCareSystem.Forms
                 }
             }
             this.Close();
+        }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show(
+                "Are you sure to logout?", "Logout",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (result == DialogResult.Yes)
+            {
+                Form dashboardForm = null;
+                foreach (Form openForm in Application.OpenForms)
+                {
+                    if (openForm is frmAdminDashboard || openForm is frmStaffDashboard)
+                        dashboardForm = openForm;
+                }
+                if (dashboardForm != null) dashboardForm.Close();
+
+                frmLogin login = new frmLogin();
+                login.Show();
+                this.Close();
+            }
         }
     }
 }
