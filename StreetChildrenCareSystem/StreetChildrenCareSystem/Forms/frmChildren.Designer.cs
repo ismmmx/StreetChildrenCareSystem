@@ -329,6 +329,7 @@
             this.cmbSort.Name = "cmbSort";
             this.cmbSort.Size = new System.Drawing.Size(476, 45);
             this.cmbSort.TabIndex = 32;
+            this.cmbSort.SelectedIndexChanged += new System.EventHandler(this.cmbSort_SelectedIndexChanged);
             // 
             // dgvChildren
             // 
@@ -337,6 +338,7 @@
             this.dgvChildren.Name = "dgvChildren";
             this.dgvChildren.RowHeadersWidth = 82;
             this.dgvChildren.RowTemplate.Height = 33;
+            this.dgvChildren.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvChildren.Size = new System.Drawing.Size(1212, 494);
             this.dgvChildren.TabIndex = 33;
             this.dgvChildren.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvChildren_CellClick);

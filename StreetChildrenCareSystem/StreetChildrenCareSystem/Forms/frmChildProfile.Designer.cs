@@ -379,6 +379,7 @@
             this.dgvVaccinations.Name = "dgvVaccinations";
             this.dgvVaccinations.RowHeadersWidth = 82;
             this.dgvVaccinations.RowTemplate.Height = 33;
+            this.dgvVaccinations.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvVaccinations.Size = new System.Drawing.Size(1176, 358);
             this.dgvVaccinations.TabIndex = 9;
             // 
