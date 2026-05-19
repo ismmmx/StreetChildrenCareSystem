@@ -342,6 +342,7 @@
             this.dgvChildren.Size = new System.Drawing.Size(1212, 494);
             this.dgvChildren.TabIndex = 33;
             this.dgvChildren.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvChildren_CellClick);
+            this.dgvChildren.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvChildren_CellContentClick);
             // 
             // btnViewProfile
             // 

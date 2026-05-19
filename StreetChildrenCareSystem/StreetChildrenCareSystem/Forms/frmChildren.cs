@@ -379,5 +379,10 @@ namespace StreetChildrenCareSystem.Forms
             ClearForm();
             LoadChildren();
         }
+
+        private void dgvChildren_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
