@@ -67,7 +67,7 @@ namespace StreetChildrenCareSystem.Forms
             {
                 DataRow row = dt.Rows[0];
 
-                // FIXED: String literal prefixes removed to prevent duplicate text overlay on UI labels
+               
                 lblChildID.Text = row["ChildID"].ToString();
                 lblName.Text = row["ChildName"].ToString();
                 lblAge.Text = row["Age"].ToString();
@@ -116,7 +116,7 @@ namespace StreetChildrenCareSystem.Forms
             dgvVaccinations.DataSource = dt;
         }
 
-        // Add vaccination button (coming soon)
+        // Add vaccination button 
         private void btnAddVaccination_Click(object sender, EventArgs e)
         {
             // Open Vaccination form so Admin can add vaccination for this child
@@ -138,7 +138,7 @@ namespace StreetChildrenCareSystem.Forms
                 }
             }
 
-            // Step 2: Find frmChildren and close it
+            // Find frmChildren and close it
             frmChildren childrenForm = null;
             foreach (Form openForm in Application.OpenForms)
             {
@@ -151,7 +151,7 @@ namespace StreetChildrenCareSystem.Forms
             if (childrenForm != null)
                 childrenForm.Close();
 
-            // Step 3: Close this profile form
+            // Close this profile form
             this.Close();
         }
 

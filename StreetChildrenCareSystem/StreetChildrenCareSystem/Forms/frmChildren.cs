@@ -210,11 +210,11 @@ namespace StreetChildrenCareSystem.Forms
                     numAge.Value = 0;
                 }
 
-                // ৪. Orphanage ComboBox প্রদর্শন হ্যান্ডেল করা
+                // ৪. Orphanage ComboBox 
                 string orpName = Convert.ToString(row.Cells["OrpName"].Value);
                 cmbOrphanage.Text = string.IsNullOrEmpty(orpName) ? "-- None --" : orpName;
 
-                // ৫. Foundation ComboBox প্রদর্শন হ্যান্ডেল করা
+                // ৫. Foundation ComboBox 
                 string fouName = Convert.ToString(row.Cells["FouName"].Value);
                 cmbFoundation.Text = string.IsNullOrEmpty(fouName) ? "-- None --" : fouName;
             }
@@ -306,7 +306,6 @@ namespace StreetChildrenCareSystem.Forms
             f.Show();
 
             // Only hide this form if profile form is actually visible and open
-            // This prevents the "everything vanishes" bug
             if (f.Visible)
             {
                 this.Hide();

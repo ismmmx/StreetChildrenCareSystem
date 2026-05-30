@@ -14,7 +14,7 @@ namespace StreetChildrenCareSystem.Models
         public string UserRole { get; set; }
 
         // Abstract method —
-        // Polymorphism এর জন্য
+        // Polymorphism 
         public abstract string GetRole();
     }
 
@@ -33,7 +33,7 @@ namespace StreetChildrenCareSystem.Models
         }
     }
 
-    // Staff Class — Inheritance
+    // Staff Class - Inheritance
     public class Staff : User
     {
         public override string GetRole()

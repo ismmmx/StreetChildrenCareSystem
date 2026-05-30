@@ -31,7 +31,7 @@ namespace StreetChildrenCareSystem.Forms
             SetPermissions();
             LoadFoundations();
 
-            // Fix: make columns fill the full width of the DataGridView
+            // make columns fill the full width of the DataGridView
             dgvFoundation.AutoSizeColumnsMode =
                 DataGridViewAutoSizeColumnsMode.Fill;
 
