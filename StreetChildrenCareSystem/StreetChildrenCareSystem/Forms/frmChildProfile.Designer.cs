@@ -64,30 +64,36 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 13.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Green;
             this.label1.Location = new System.Drawing.Point(175, 60);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(162, 37);
+            this.label1.Size = new System.Drawing.Size(238, 50);
             this.label1.TabIndex = 0;
             this.label1.Text = "Child Profile";
             // 
             // btnHome
             // 
+            this.btnHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(201)))), ((int)(((byte)(163)))));
+            this.btnHome.Font = new System.Drawing.Font("Segoe UI", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHome.Location = new System.Drawing.Point(842, 45);
             this.btnHome.Name = "btnHome";
             this.btnHome.Size = new System.Drawing.Size(133, 67);
             this.btnHome.TabIndex = 1;
             this.btnHome.Text = "Home";
-            this.btnHome.UseVisualStyleBackColor = true;
+            this.btnHome.UseVisualStyleBackColor = false;
             this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
             // 
             // btnLogout
             // 
+            this.btnLogout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(201)))), ((int)(((byte)(163)))));
+            this.btnLogout.Font = new System.Drawing.Font("Segoe UI", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogout.Location = new System.Drawing.Point(1087, 45);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(133, 67);
             this.btnLogout.TabIndex = 2;
             this.btnLogout.Text = "Logout";
-            this.btnLogout.UseVisualStyleBackColor = true;
+            this.btnLogout.UseVisualStyleBackColor = false;
             this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
             // panel1
@@ -117,54 +123,72 @@
             // lblFoundation
             // 
             this.lblFoundation.AutoSize = true;
+            this.lblFoundation.BackColor = System.Drawing.Color.Transparent;
+            this.lblFoundation.Font = new System.Drawing.Font("Segoe UI", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFoundation.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(61)))), ((int)(((byte)(43)))));
             this.lblFoundation.Location = new System.Drawing.Point(231, 495);
             this.lblFoundation.Name = "lblFoundation";
-            this.lblFoundation.Size = new System.Drawing.Size(47, 37);
+            this.lblFoundation.Size = new System.Drawing.Size(49, 37);
             this.lblFoundation.TabIndex = 21;
             this.lblFoundation.Text = "00";
             // 
             // lblOrphanage
             // 
             this.lblOrphanage.AutoSize = true;
+            this.lblOrphanage.BackColor = System.Drawing.Color.Transparent;
+            this.lblOrphanage.Font = new System.Drawing.Font("Segoe UI", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblOrphanage.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(61)))), ((int)(((byte)(43)))));
             this.lblOrphanage.Location = new System.Drawing.Point(231, 415);
             this.lblOrphanage.Name = "lblOrphanage";
-            this.lblOrphanage.Size = new System.Drawing.Size(47, 37);
+            this.lblOrphanage.Size = new System.Drawing.Size(49, 37);
             this.lblOrphanage.TabIndex = 19;
             this.lblOrphanage.Text = "00";
             // 
             // lblStatus
             // 
             this.lblStatus.AutoSize = true;
+            this.lblStatus.BackColor = System.Drawing.Color.Transparent;
+            this.lblStatus.Font = new System.Drawing.Font("Segoe UI", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblStatus.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(61)))), ((int)(((byte)(43)))));
             this.lblStatus.Location = new System.Drawing.Point(231, 341);
             this.lblStatus.Name = "lblStatus";
-            this.lblStatus.Size = new System.Drawing.Size(47, 37);
+            this.lblStatus.Size = new System.Drawing.Size(49, 37);
             this.lblStatus.TabIndex = 17;
             this.lblStatus.Text = "00";
             // 
             // lblLocation
             // 
             this.lblLocation.AutoSize = true;
+            this.lblLocation.BackColor = System.Drawing.Color.Transparent;
+            this.lblLocation.Font = new System.Drawing.Font("Segoe UI", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLocation.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(61)))), ((int)(((byte)(43)))));
             this.lblLocation.Location = new System.Drawing.Point(231, 269);
             this.lblLocation.Name = "lblLocation";
-            this.lblLocation.Size = new System.Drawing.Size(47, 37);
+            this.lblLocation.Size = new System.Drawing.Size(49, 37);
             this.lblLocation.TabIndex = 15;
             this.lblLocation.Text = "00";
             // 
             // lblGender
             // 
             this.lblGender.AutoSize = true;
+            this.lblGender.BackColor = System.Drawing.Color.Transparent;
+            this.lblGender.Font = new System.Drawing.Font("Segoe UI", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGender.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(61)))), ((int)(((byte)(43)))));
             this.lblGender.Location = new System.Drawing.Point(743, 195);
             this.lblGender.Name = "lblGender";
-            this.lblGender.Size = new System.Drawing.Size(47, 37);
+            this.lblGender.Size = new System.Drawing.Size(49, 37);
             this.lblGender.TabIndex = 13;
             this.lblGender.Text = "00";
             // 
             // lblAge
             // 
             this.lblAge.AutoSize = true;
+            this.lblAge.BackColor = System.Drawing.Color.Transparent;
+            this.lblAge.Font = new System.Drawing.Font("Segoe UI", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAge.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(61)))), ((int)(((byte)(43)))));
             this.lblAge.Location = new System.Drawing.Point(231, 195);
             this.lblAge.Name = "lblAge";
-            this.lblAge.Size = new System.Drawing.Size(47, 37);
+            this.lblAge.Size = new System.Drawing.Size(49, 37);
             this.lblAge.TabIndex = 11;
             this.lblAge.Text = "00";
             this.lblAge.Click += new System.EventHandler(this.lblAge_Click);
@@ -172,133 +196,171 @@
             // lblName
             // 
             this.lblName.AutoSize = true;
+            this.lblName.BackColor = System.Drawing.Color.Transparent;
+            this.lblName.Font = new System.Drawing.Font("Segoe UI", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(61)))), ((int)(((byte)(43)))));
             this.lblName.Location = new System.Drawing.Point(231, 127);
             this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(47, 37);
+            this.lblName.Size = new System.Drawing.Size(49, 37);
             this.lblName.TabIndex = 9;
             this.lblName.Text = "00";
             // 
             // lblChildID
             // 
             this.lblChildID.AutoSize = true;
+            this.lblChildID.BackColor = System.Drawing.Color.Transparent;
+            this.lblChildID.Font = new System.Drawing.Font("Segoe UI", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblChildID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(61)))), ((int)(((byte)(43)))));
             this.lblChildID.Location = new System.Drawing.Point(231, 54);
             this.lblChildID.Name = "lblChildID";
-            this.lblChildID.Size = new System.Drawing.Size(47, 37);
+            this.lblChildID.Size = new System.Drawing.Size(49, 37);
             this.lblChildID.TabIndex = 8;
             this.lblChildID.Text = "00";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.Transparent;
+            this.label9.Font = new System.Drawing.Font("Segoe UI", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(61)))), ((int)(((byte)(43)))));
             this.label9.Location = new System.Drawing.Point(62, 495);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(166, 37);
+            this.label9.Size = new System.Drawing.Size(178, 37);
             this.label9.TabIndex = 7;
             this.label9.Text = "Foundation :";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.Transparent;
+            this.label8.Font = new System.Drawing.Font("Segoe UI", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(61)))), ((int)(((byte)(43)))));
             this.label8.Location = new System.Drawing.Point(62, 415);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(163, 37);
+            this.label8.Size = new System.Drawing.Size(173, 37);
             this.label8.TabIndex = 6;
             this.label8.Text = "Orphanage :";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.Transparent;
+            this.label7.Font = new System.Drawing.Font("Segoe UI", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(61)))), ((int)(((byte)(43)))));
             this.label7.Location = new System.Drawing.Point(62, 341);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(101, 37);
+            this.label7.Size = new System.Drawing.Size(110, 37);
             this.label7.TabIndex = 5;
             this.label7.Text = "Status :";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(61)))), ((int)(((byte)(43)))));
             this.label6.Location = new System.Drawing.Point(62, 269);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(138, 37);
+            this.label6.Size = new System.Drawing.Size(147, 37);
             this.label6.TabIndex = 4;
             this.label6.Text = "Found At :";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(61)))), ((int)(((byte)(43)))));
             this.label5.Location = new System.Drawing.Point(625, 195);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(117, 37);
+            this.label5.Size = new System.Drawing.Size(124, 37);
             this.label5.TabIndex = 3;
             this.label5.Text = "Gender :";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(61)))), ((int)(((byte)(43)))));
             this.label4.Location = new System.Drawing.Point(62, 195);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(77, 37);
+            this.label4.Size = new System.Drawing.Size(82, 37);
             this.label4.TabIndex = 2;
             this.label4.Text = "Age :";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(61)))), ((int)(((byte)(43)))));
             this.label3.Location = new System.Drawing.Point(62, 127);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(101, 37);
+            this.label3.Size = new System.Drawing.Size(107, 37);
             this.label3.TabIndex = 1;
             this.label3.Text = "Name :";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(61)))), ((int)(((byte)(43)))));
             this.label2.Location = new System.Drawing.Point(62, 54);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(125, 37);
+            this.label2.Size = new System.Drawing.Size(133, 37);
             this.label2.TabIndex = 0;
             this.label2.Text = "Child ID :";
             // 
             // btnEdit
             // 
+            this.btnEdit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(201)))), ((int)(((byte)(163)))));
+            this.btnEdit.Font = new System.Drawing.Font("Segoe UI", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEdit.Location = new System.Drawing.Point(209, 802);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(233, 87);
             this.btnEdit.TabIndex = 4;
             this.btnEdit.Text = "Edit Profile";
-            this.btnEdit.UseVisualStyleBackColor = true;
+            this.btnEdit.UseVisualStyleBackColor = false;
             this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // btnDeleteChild
             // 
+            this.btnDeleteChild.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btnDeleteChild.Font = new System.Drawing.Font("Segoe UI", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDeleteChild.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.btnDeleteChild.Location = new System.Drawing.Point(622, 802);
             this.btnDeleteChild.Name = "btnDeleteChild";
             this.btnDeleteChild.Size = new System.Drawing.Size(233, 87);
             this.btnDeleteChild.TabIndex = 5;
             this.btnDeleteChild.Text = "Delete Child";
-            this.btnDeleteChild.UseVisualStyleBackColor = true;
+            this.btnDeleteChild.UseVisualStyleBackColor = false;
             this.btnDeleteChild.Click += new System.EventHandler(this.btnDeleteChild_Click);
             // 
             // label10
             // 
             this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Segoe UI", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.Location = new System.Drawing.Point(84, 960);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(323, 37);
+            this.label10.Size = new System.Drawing.Size(348, 37);
             this.label10.TabIndex = 6;
             this.label10.Text = "── Vaccination Records ──";
             // 
             // label11
             // 
             this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Segoe UI", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.Location = new System.Drawing.Point(102, 1036);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(78, 37);
+            this.label11.Size = new System.Drawing.Size(86, 37);
             this.label11.TabIndex = 7;
             this.label11.Text = "Sort :";
             // 
             // cmbSortVac
             // 
+            this.cmbSortVac.Font = new System.Drawing.Font("Segoe UI", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbSortVac.FormattingEnabled = true;
             this.cmbSortVac.Items.AddRange(new object[] {
             "Sort by Date",
@@ -317,27 +379,32 @@
             this.dgvVaccinations.Name = "dgvVaccinations";
             this.dgvVaccinations.RowHeadersWidth = 82;
             this.dgvVaccinations.RowTemplate.Height = 33;
-            this.dgvVaccinations.Size = new System.Drawing.Size(1160, 358);
+            this.dgvVaccinations.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvVaccinations.Size = new System.Drawing.Size(1176, 358);
             this.dgvVaccinations.TabIndex = 9;
             // 
             // btnAddVaccination
             // 
+            this.btnAddVaccination.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(201)))), ((int)(((byte)(163)))));
+            this.btnAddVaccination.Font = new System.Drawing.Font("Segoe UI", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddVaccination.Location = new System.Drawing.Point(165, 1539);
             this.btnAddVaccination.Name = "btnAddVaccination";
             this.btnAddVaccination.Size = new System.Drawing.Size(233, 87);
             this.btnAddVaccination.TabIndex = 10;
             this.btnAddVaccination.Text = "Add Vaccination";
-            this.btnAddVaccination.UseVisualStyleBackColor = true;
+            this.btnAddVaccination.UseVisualStyleBackColor = false;
             this.btnAddVaccination.Click += new System.EventHandler(this.btnAddVaccination_Click);
             // 
             // btnBack
             // 
+            this.btnBack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(201)))), ((int)(((byte)(163)))));
+            this.btnBack.Font = new System.Drawing.Font("Segoe UI", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBack.Location = new System.Drawing.Point(945, 1539);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(233, 87);
             this.btnBack.TabIndex = 11;
             this.btnBack.Text = "Back";
-            this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.UseVisualStyleBackColor = false;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // label12
@@ -355,7 +422,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(247)))), ((int)(((byte)(240)))));
-            this.ClientSize = new System.Drawing.Size(1374, 929);
+            this.ClientSize = new System.Drawing.Size(1408, 929);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnAddVaccination);
