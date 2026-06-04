@@ -129,6 +129,7 @@ git clone https://github.com/ismmmx/StreetChildrenCareSystem.git
 
 ## 📁 Project Structure
 
+```
 StreetChildrenCareSystem/                          ← Repository Root
 │
 ├── 📁 Database/
@@ -174,6 +175,7 @@ StreetChildrenCareSystem/                          ← Repository Root
 │
 ├── .gitignore
 └── README.md
+```
 
 ---
 
